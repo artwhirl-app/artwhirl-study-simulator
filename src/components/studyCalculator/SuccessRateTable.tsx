@@ -13,7 +13,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 export const SuccessRateTable: React.FC<{ plusSuccessRate: PlusSuccessRateItem[] }> = ({ plusSuccessRate }) => {
   const [expand, setExpand] = useState(true);
   return (
-    <Accordion expanded={expand}>
+    <Accordion expanded={expand} className="success-rate-table-root">
       <AccordionSummary expandIcon={<ExpandMoreIcon />} onClick={() => setExpand(!expand)}>
         <h4>成功率</h4>
       </AccordionSummary>

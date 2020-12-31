@@ -38,7 +38,7 @@ export const CreatePartyForm: React.FC<{
     typeof e.target.value === 'string' && emitRank(e.target.value);
   };
   return (
-    <Accordion expanded={true}>
+    <Accordion expanded={true} className="create-party-form-root">
       <AccordionSummary>
         <h4>研究設定</h4>
       </AccordionSummary>

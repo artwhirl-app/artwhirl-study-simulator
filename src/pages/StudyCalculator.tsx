@@ -38,11 +38,11 @@ export const StudyCalculator: React.FC = () => {
   }, [study, tgtRank]);
 
   return (
-    <React.Fragment>
+    <div className="study-calculator-container">
       <CreatePartyForm emitStudy={setStudy} emitRank={setTgtRank} />
       <SuccessRateTable plusSuccessRate={result.plusSuccessRate} />
       <RuneSlotRateTable runeSlotSuccessRate={result.runeSlotSuccessRate} />
-      <Accordion expanded={true}>
+      <Accordion expanded={true} className="spawn-table-root">
         <AccordionSummary>
           <h4>生成物出現確率</h4>
         </AccordionSummary>
@@ -89,6 +89,6 @@ export const StudyCalculator: React.FC = () => {
           </div>
         </AccordionDetails>
       </Accordion>
-    </React.Fragment>
+    </div>
   );
 };

@@ -17,7 +17,7 @@ export const RuneSlotRateTable: React.FC<{ runeSlotSuccessRate: SlotSuccessRateI
 }) => {
   const [expand, setExpand] = useState(true);
   return (
-    <Accordion expanded={expand}>
+    <Accordion expanded={expand} className="rune-slot-rate-table-root">
       <AccordionSummary expandIcon={<ExpandMoreIcon />} onClick={() => setExpand(!expand)}>
         <h4>ルーンスロット発生率</h4>
       </AccordionSummary>
