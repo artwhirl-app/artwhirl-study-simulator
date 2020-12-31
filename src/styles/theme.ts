@@ -121,6 +121,18 @@ export const theme = createMuiTheme({
     },
   },
   overrides: {
+    MuiAccordionSummary: {
+      root: {
+        '&.Mui-expanded': {
+          minHeight: '52px',
+        },
+      },
+      content: {
+        '&.Mui-expanded': {
+          margin: 0,
+        },
+      },
+    },
     MuiButton: {
       root: {
         textTransform: 'none', // ボタン内アルファベット文字を大文字変換しない
@@ -221,6 +233,9 @@ export const theme = createMuiTheme({
     MuiOutlinedInput: {
       margin: 'dense',
       notched: true,
+    },
+    MuiPaper: {
+      elevation: 5,
     },
     MuiSelect: {
       variant: 'outlined',

@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import ErrorBoundary from './ErrorBoundary';
 import { StudyCalculator } from './pages/StudyCalculator';
 import { AppIntlProvider, LocaleKey } from './intl/AppIntlProvider';
-
+import './App.scss';
 /**
  * ルートコンポーネント
  * @constructor
