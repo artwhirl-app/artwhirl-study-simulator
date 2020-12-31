@@ -1,0 +1,30 @@
+.create-party-form {
+  display: grid;
+  gap: 8px;
+  @media screen and (min-width: 780px) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:"study tgtRank plusPerAdd runePerAdd . . . .";
+  }
+  @media screen and (max-width: 780px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:"study tgtRank"
+      "plusPerAdd runePerAdd";
+  }
+
+  .study {
+    grid-area: study;
+  }
+
+  .plusPerAdd {
+    grid-area: plusPerAdd;
+  }
+
+  .runePerAdd {
+    grid-area: runePerAdd;
+  }
+
+  .tgtRank {
+    grid-area: tgtRank;
+  }
+
+}

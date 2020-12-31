@@ -1,0 +1,91 @@
+{
+  "name": "artwhirl-study-simulaltor",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-intl": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "extract-react-intl-messages": "^4.1.1",
+    "json-loader": "^0.5.7",
+    "path-browserify": "^1.0.1",
+    "raw-loader": "^4.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-hook-form": "^6.12.2",
+    "react-intl": "^5.10.9",
+    "react-markdown": "^5.0.2",
+    "react-router-dom": "^5.2.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.10",
+    "typescript": "^3.7.2",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "yaml-flat-loader": "^1.0.2"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "webpack serve",
+    "intl:build": "extract-messages -l=ja,ja-sp -o src/intl/locales src/intl/messages/**/*.ts -f yaml --flat"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.6",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  }
+}
