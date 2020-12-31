@@ -121,6 +121,14 @@ export const theme = createMuiTheme({
     },
   },
   overrides: {
+    MuiAccordion: {
+      root: {
+        margin: 0,
+        '&.Mui-expanded': {
+          margin: 0,
+        },
+      },
+    },
     MuiAccordionSummary: {
       root: {
         '&.Mui-expanded': {
@@ -181,6 +189,11 @@ export const theme = createMuiTheme({
         fontSize: '1rem',
       },
     },
+    MuiPaper: {
+      root: {
+        border: 'solid 1px rgba(0,0,0,0.12)',
+      },
+    },
     MuiTab: {
       textColorInherit: {
         opacity: 1,
@@ -235,7 +248,7 @@ export const theme = createMuiTheme({
       notched: true,
     },
     MuiPaper: {
-      elevation: 5,
+      elevation: 0,
     },
     MuiSelect: {
       variant: 'outlined',

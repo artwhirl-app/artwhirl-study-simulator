@@ -2,11 +2,9 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas:
+    "create-party-form-root"
     "success-rate-table-root"
     "rune-slot-rate-table-root"
-    "create-party-form-root"
-    "success-rate-table-root_expanded"
-    "rune-slot-rate-table-root_expanded"
     "spawn-table-root";
 
   .create-party-form-root {
@@ -15,18 +13,10 @@
 
   .success-rate-table-root {
     grid-area: success-rate-table-root;
-
-    &.Mui-expanded {
-      grid-area: success-rate-table-root_expanded;
-    }
   }
 
   .rune-slot-rate-table-root {
     grid-area: rune-slot-rate-table-root;
-
-    &.Mui-expanded {
-      grid-area: rune-slot-rate-table-root_expanded;
-    }
   }
 
   .spawn-table-root {
