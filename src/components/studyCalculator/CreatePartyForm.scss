@@ -1,9 +1,13 @@
 .create-party-form {
   display: grid;
   gap: 8px;
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: 1350px) {
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas:"study tgtRank plusPerAdd runePerAdd . . . .";
+  }
+  @media screen and (min-width: 780px) and (max-width: 1350px){
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:"study tgtRank plusPerAdd runePerAdd";
   }
   @media screen and (max-width: 780px) {
     grid-template-columns: repeat(2, 1fr);

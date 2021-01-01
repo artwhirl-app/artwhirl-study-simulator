@@ -6,6 +6,15 @@ import ErrorBoundary from './ErrorBoundary';
 import { StudyCalculator } from './pages/StudyCalculator';
 import { AppIntlProvider, LocaleKey } from './intl/AppIntlProvider';
 import './App.scss';
+
+type WINDOW_SIZE = 'SP' | 'BROWSER';
+export const getWindowSize = (): WINDOW_SIZE => {
+  if (window.screen.width > 780) {
+    return 'BROWSER';
+  }
+  return 'SP';
+};
+
 /**
  * ルートコンポーネント
  * @constructor
@@ -13,7 +22,7 @@ import './App.scss';
 export const App: React.FC = () => {
   const [locale, setLocale] = React.useState<LocaleKey>('ja');
   React.useEffect(() => {
-    if (window.screen.width > 780) {
+    if (getWindowSize() === 'BROWSER') {
       setLocale('ja');
     } else {
       setLocale('ja-sp');

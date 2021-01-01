@@ -11,6 +11,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { getWindowSize } from '../../App';
 
 export const RuneSlotRateTable: React.FC<{ runeSlotSuccessRate: SlotSuccessRateItem[] }> = ({
   runeSlotSuccessRate,
@@ -18,9 +19,15 @@ export const RuneSlotRateTable: React.FC<{ runeSlotSuccessRate: SlotSuccessRateI
   const [expand, setExpand] = useState(true);
   return (
     <Accordion expanded={expand} className="rune-slot-rate-table-root">
-      <AccordionSummary expandIcon={<ExpandMoreIcon />} onClick={() => setExpand(!expand)}>
-        <h4>ルーンスロット発生率</h4>
-      </AccordionSummary>
+      {getWindowSize() === 'SP' ? (
+        <AccordionSummary expandIcon={<ExpandMoreIcon />} onClick={() => setExpand(!expand)}>
+          <h4>ルーンスロット発生率</h4>
+        </AccordionSummary>
+      ) : (
+        <AccordionSummary>
+          <h4>ルーンスロット発生率</h4>
+        </AccordionSummary>
+      )}
       <AccordionDetails>
         <div className="rune-slot-rate-table-container table-container">
           <Table className="rune-slot-rate-table">
