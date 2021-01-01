@@ -47,7 +47,7 @@ export const StudyCalculator: React.FC = () => {
           <h4>生成物出現確率</h4>
         </AccordionSummary>
         <AccordionDetails>
-          <div className="spawn-table-container">
+          <div className="spawn-table-container table-container">
             <Table className="spawn-table">
               <TableHead>
                 <TableRow>

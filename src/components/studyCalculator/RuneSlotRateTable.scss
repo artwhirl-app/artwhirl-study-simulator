@@ -1,5 +1,8 @@
-.rune-slot-rate-table {
-  thead {
-    white-space: nowrap;
+.rune-slot-rate-table-container{
+  overflow: auto;
+  .rune-slot-rate-table {
+    thead {
+      white-space: nowrap;
+    }
   }
 }

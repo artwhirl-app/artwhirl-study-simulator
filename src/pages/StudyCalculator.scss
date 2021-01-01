@@ -21,23 +21,18 @@
 
   .spawn-table-root {
     grid-area: spawn-table-root;
-
-    .spawn-table-container {
-      overflow: auto;
-
-      .spawn-table {
-        th, td {
-          &:first-child {
-            border-right: 3px double rgba(0, 0, 0, 0.25);
-            white-space: nowrap;
-          }
+    .spawn-table {
+      th, td {
+        &:first-child {
+          border-right: 3px double rgba(0, 0, 0, 0.25);
+          white-space: nowrap;
         }
+      }
 
-        tbody {
-          tr {
-            &:last-child {
-              border-top: 3px double rgba(0, 0, 0, 0.25);
-            }
+      tbody {
+        tr {
+          &:last-child {
+            border-top: 3px double rgba(0, 0, 0, 0.25);
           }
         }
       }

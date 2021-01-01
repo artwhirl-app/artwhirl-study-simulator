@@ -18,22 +18,24 @@ export const SuccessRateTable: React.FC<{ plusSuccessRate: PlusSuccessRateItem[]
         <h4>成功率</h4>
       </AccordionSummary>
       <AccordionDetails>
-        <Table>
-          <TableHead>
-            <TableRow>
-              {plusSuccessRate.map((successRate, key) => (
-                <TableCell key={key}>+{successRate.plus}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              {plusSuccessRate.map((successRate, key) => (
-                <TableCell key={key}>{Math.floor(successRate.successRate)}%</TableCell>
-              ))}
-            </TableRow>
-          </TableBody>
-        </Table>
+        <div className="success-rate-table-container table-container">
+          <Table>
+            <TableHead>
+              <TableRow>
+                {plusSuccessRate.map((successRate, key) => (
+                  <TableCell key={key}>+{successRate.plus}</TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                {plusSuccessRate.map((successRate, key) => (
+                  <TableCell key={key}>{Math.floor(successRate.successRate)}%</TableCell>
+                ))}
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
       </AccordionDetails>
     </Accordion>
   );

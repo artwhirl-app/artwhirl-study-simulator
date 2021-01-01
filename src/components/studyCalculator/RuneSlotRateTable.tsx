@@ -22,24 +22,26 @@ export const RuneSlotRateTable: React.FC<{ runeSlotSuccessRate: SlotSuccessRateI
         <h4>ルーンスロット発生率</h4>
       </AccordionSummary>
       <AccordionDetails>
-        <Table className="rune-slot-rate-table">
-          <TableHead>
-            <TableRow>
-              {runeSlotSuccessRate.map((successRate, key) => (
-                <TableCell key={key}>
-                  <FormattedMessage id="study.runeSlotRateTable.header" values={{ num: successRate.slot }} />
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              {runeSlotSuccessRate.map((successRate, key) => (
-                <TableCell key={key}>{Math.floor(successRate.successRate)}%</TableCell>
-              ))}
-            </TableRow>
-          </TableBody>
-        </Table>
+        <div className="rune-slot-rate-table-container table-container">
+          <Table className="rune-slot-rate-table">
+            <TableHead>
+              <TableRow>
+                {runeSlotSuccessRate.map((successRate, key) => (
+                  <TableCell key={key}>
+                    <FormattedMessage id="study.runeSlotRateTable.header" values={{ num: successRate.slot }} />
+                  </TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                {runeSlotSuccessRate.map((successRate, key) => (
+                  <TableCell key={key}>{Math.floor(successRate.successRate)}%</TableCell>
+                ))}
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
       </AccordionDetails>
     </Accordion>
   );
